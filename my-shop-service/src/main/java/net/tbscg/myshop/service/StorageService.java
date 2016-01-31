@@ -27,6 +27,7 @@ public class StorageService implements IStorageService {
         return customers;
     }
     @Override
+    //dupa
     public Customer getCustomerByID(String id) {//przeiteruj się i znajdz naszego customera z id
         for (int i = 0; i < customers.size(); i++) {//index to i
             if (customers.get(i).getId().equals(id)){

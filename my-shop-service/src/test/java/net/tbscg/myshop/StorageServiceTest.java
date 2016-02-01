@@ -60,7 +60,7 @@ public class StorageServiceTest {
         Customer customer1 = new Customer("customer1", "address1");
         testedObject.addCustomer(customer1);
         testedObject.getCustomerByID("1");
-        
+
         System.out.println( testedObject.getCustomerByID("1"));
         assertEquals(1,testedObject.listCustomers().size());
 

@@ -50,8 +50,9 @@ public class StorageServiceTest {
        Customer customer1 = new Customer("customer1", "address1");
         testedObject.listCustomers().add(customer1);
         assertEquals(1,testedObject.listCustomers().size());
-        /*System.out.println(1);
-        System.out.println(testedObject.listCustomers().size());*/
+
+       /* boolean c1 = testedObject.listCustomers().isEmpty();
+        assertFalse(c1);*/
     }
 
     @Test
@@ -59,7 +60,14 @@ public class StorageServiceTest {
         Customer customer1 = new Customer("customer1", "address1");
         testedObject.addCustomer(customer1);
         testedObject.getCustomerByID("1");
-        assertEquals("1", testedObject.listCustomers().get(0).getId());
+        
+        System.out.println( testedObject.getCustomerByID("1"));
+        assertEquals(1,testedObject.listCustomers().size());
+
+        assertEquals(customer1.getId(),testedObject.listCustomers().get(0).getId());
+        System.out.println(customer1.getId());
+        System.out.println(testedObject.listCustomers().get(0).getId());
+
     }
 
     @Test
